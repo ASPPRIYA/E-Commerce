@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"" >
+    <title>E-COMMERCE|Contact</title>
+</head>
+
+<body>
+    <nav class=" nav nav_top">
+    <div class="logo">
+        <a href=""><img src="loan2.jpg" width='150'></a>
+    </div>
+    <div class="nav_side">
+        <a href="about.html" target="_black">About Us </a>
+        <a href="service.html">Services</a>
+        <a href="blog.html">Blogs</a>
+        <a href="contact.html">Contact </a>
+        <a href="login.html"> login/register</a>
+
+    </div>
+    </nav>
+    <div class="contact_container">
+        <h2>contact us</h2>
+        <div class="g_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233629.8835840893!2d86.29450686917504!3d23.80198967405976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f6a30804ccfc6d%3A0xfa151e1b85f764e7!2sDhanbad%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1652926722935!5m2!1sen!2sin" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+        <div class="contact_content">
+            <p><b>Address:Dhanbad,India</b></p>
+            <p><b>Call:+917956496865</b></p>
+            <p><b>Mail:support@gmail.com</b></p>
+         
+        </div>
+    </div>
+    <div class="feed">
+        <h2>WRITE YOUR REVIEW</h2>
+        <div class="feed_form" method="post">
+            <form name="submit">
+                <input type="text" name="Name" placeholder="Name"><br>
+                <input type="email" name="Email" placeholder="Email Id"><br>
+                <input type="number" name="Number" placeholder="Contact Number"><br>
+                <textarea rows="5" cols="7" name="Review" placeholder="Write Your Review"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_logo">
+            <a href=""><img src="loan2.jpg" width='150'></a>
+        </div>
+        <div class="pages">
+            <h3>Pages</h3>
+            <a href="about.html">About US</a>|
+            <a href="service.html">Services</a>|
+            <a href="blog.html">Blogs</a>|
+            <a href=" ">Login</a>|
+            <a href=" ">Sign Up</a>
+
+        </div>
+        <div class="doc">
+            <h3>Documents</h3>
+            <a href=" ">Privacy Poicy</a>|
+            <a href=" ">Terms Of Use</a>|
+            <a href=" ">Refund Policy</a>|
+        </div>
+        <div class="social">
+            <h3>Follow us</h3>
+            <a href=" https://en.wikipedia.org/wiki/Facebook" target="_black"><i class="fa fa-facebook"
+                    aria-hidden="true"></i></a>
+            <a href=" "><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href=" "><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <a href="https://api.WhatsApp.com/send?phone=+919346217836" target="_blank"><i class="fa fa-whatsapp"
+                    aria-hidden="true"></i></a>
+            <a href="tel :+919737984723 "><i class="fa fa-phone" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+        </div>
+        <hr>
+
+        <p>Copyright&copy; 2021 1stop. All rights reserved</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzKl7HXIAqgfxCPzgTR4EdJVyTAppL8qTfedIdIxwhK9-UeEFsF3RoUh0eIALtplSQx/exec'
+        const form = document.forms['submit']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+                .then(response => alert(
+                    "Thanks for you valuable feedback!!!"))
+                .catch(error => console.error('Error!', error.message))
+        })
+
+    </script>
+
+    </body>
+
+</html>
